@@ -6,9 +6,7 @@ telemetry = false
 cache_dir = './.cache'
 requirements = []
 
-[contracts.protocol-registry]
-path = 'contracts/protocol-registry.clar'
-clarity_version = 3
+
 epoch = 'latest'
 [repl.analysis]
 passes = [
