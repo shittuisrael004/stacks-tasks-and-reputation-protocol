@@ -1,29 +1,4 @@
-;; title: reputation-core
-;; version:
-;; summary:
-;; description:
-
-;; traits
-;;
-
-;; token definitions
-;;
-
-;; constants
-;;
-
-;; data vars
-;;
-
-;; data maps
-;;
-
-;; public functions
-;;
-
-;; read only functions
-;;
-
-;; private functions
-;;
-
+;; ---------------------------------------------------------
+;; Reputation Core
+;; Tracks reputation scores per user
+;; ---------------------------------------------------------
