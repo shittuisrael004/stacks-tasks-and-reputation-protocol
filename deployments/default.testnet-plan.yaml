@@ -11,7 +11,7 @@ plan:
         - contract-publish:
             contract-name: user-registry
             expected-sender: STYCC3PA4V5ZX1C627MWY40BRWX4WDPQ16Q6F2FD
-            cost: 839720
+            cost: 5240
             path: contracts/user-registry.clar
             anchor-block-only: true
             clarity-version: 3
