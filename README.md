@@ -29,3 +29,7 @@ The protocol is split into multiple focused contracts:
 6. Utility, logging, and governance helpers
 
 Each contract does one thing well.
+
+## 📜 Smart Contracts
+
+The contracts with clear comments explaining purpose and logic can be seen in the contracts folder.
