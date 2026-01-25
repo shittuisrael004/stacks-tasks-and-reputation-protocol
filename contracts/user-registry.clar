@@ -9,8 +9,8 @@
 ;; Registers the sender with block height as join time
 (define-public (register)
     (begin
-        (map-set users tx-sender block-height)
-        (ok block-height)
+        (map-set users tx-sender stacks-block-height)
+        (ok stacks-block-height)
     )
 )
 
