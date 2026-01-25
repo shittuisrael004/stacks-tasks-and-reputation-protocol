@@ -11,7 +11,7 @@ plan:
         - contract-publish:
             contract-name: role-manager
             expected-sender: STYCC3PA4V5ZX1C627MWY40BRWX4WDPQ16Q6F2FD
-            cost: 856427
+            cost: 6610
             path: contracts/role-manager.clar
             anchor-block-only: true
             clarity-version: 3
