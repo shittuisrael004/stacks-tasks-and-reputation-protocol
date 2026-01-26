@@ -11,7 +11,7 @@ plan:
         - contract-publish:
             contract-name: task-storage
             expected-sender: STYCC3PA4V5ZX1C627MWY40BRWX4WDPQ16Q6F2FD
-            cost: 343935
+            cost: 5820
             path: contracts/task-storage.clar
             anchor-block-only: true
             clarity-version: 3
