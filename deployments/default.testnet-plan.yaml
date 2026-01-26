@@ -11,7 +11,7 @@ plan:
         - contract-publish:
             contract-name: task-review
             expected-sender: STYCC3PA4V5ZX1C627MWY40BRWX4WDPQ16Q6F2FD
-            cost: 725171
+            cost: 3450
             path: contracts/task-review.clar
             anchor-block-only: true
             clarity-version: 3
