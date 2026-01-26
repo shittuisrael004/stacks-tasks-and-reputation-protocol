@@ -5,7 +5,7 @@ authors = []
 telemetry = false
 cache_dir = './.cache'
 requirements = []
-[contracts.task-payout]
+[contracts.task-payout-test]
 path = 'contracts/task-payout.clar'
 clarity_version = 3
 epoch = 'latest'

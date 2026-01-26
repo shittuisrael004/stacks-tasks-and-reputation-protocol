@@ -5,12 +5,15 @@
 
 
 (define-public (payout (worker principal) (amount uint))
-    (begin
-        ;; Transfers STX from contract to worker
-        (try! (stx-transfer? amount (as-contract tx-sender) worker))
-        (ok amount)
+  (begin
+    ;; Transfer STX from this contract to the worker
+    (as-contract
+      (try! (stx-transfer? amount tx-sender worker))
     )
+    (ok amount)
+  )
 )
+
 
 (define-public (fund (amount uint))
     (begin
