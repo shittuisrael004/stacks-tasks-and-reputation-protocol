@@ -1,29 +1,4 @@
-;; title: task-funding
-;; version:
-;; summary:
-;; description:
-
-;; traits
-;;
-
-;; token definitions
-;;
-
-;; constants
-;;
-
-;; data vars
-;;
-
-;; data maps
-;;
-
-;; public functions
-;;
-
-;; read only functions
-;;
-
-;; private functions
-;;
-
+;; ---------------------------------------------------------
+;; Task Funding
+;; Funds tasks with STX
+;; ---------------------------------------------------------
