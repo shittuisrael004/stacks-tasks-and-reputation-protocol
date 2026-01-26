@@ -11,7 +11,7 @@ plan:
         - contract-publish:
             contract-name: user-stats
             expected-sender: SPYCC3PA4V5ZX1C627MWY40BRWX4WDPQ143X3PZQ
-            cost: 733475
+            cost: 3900
             path: contracts/user-stats.clar
             anchor-block-only: true
             clarity-version: 3
