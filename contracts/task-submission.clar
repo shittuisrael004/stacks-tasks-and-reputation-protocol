@@ -1,29 +1,4 @@
-;; title: task-submission
-;; version:
-;; summary:
-;; description:
-
-;; traits
-;;
-
-;; token definitions
-;;
-
-;; constants
-;;
-
-;; data vars
-;;
-
-;; data maps
-;;
-
-;; public functions
-;;
-
-;; read only functions
-;;
-
-;; private functions
-;;
-
+;; ---------------------------------------------------------
+;; Task Submission
+;; Stores submitted work proofs
+;; ---------------------------------------------------------
