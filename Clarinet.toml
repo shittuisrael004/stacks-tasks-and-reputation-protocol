@@ -5,13 +5,14 @@ authors = []
 telemetry = false
 cache_dir = './.cache'
 requirements = []
-
+[contracts.task-counter]
+path = 'contracts/task-counter.clar'
 clarity_version = 3
 epoch = 'latest'
 [repl.analysis]
 passes = [
-    'call_checker',
     'check_checker',
+    'call_checker',
 ]
 
 [repl.analysis.lints]
