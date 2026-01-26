@@ -9,9 +9,9 @@ plan:
     - id: 0
       transactions:
         - contract-publish:
-            contract-name: task-payout
+            contract-name: task-payout-test
             expected-sender: STYCC3PA4V5ZX1C627MWY40BRWX4WDPQ16Q6F2FD
-            cost: 5760
+            cost: 5290822
             path: contracts/task-payout.clar
             anchor-block-only: true
             clarity-version: 3
