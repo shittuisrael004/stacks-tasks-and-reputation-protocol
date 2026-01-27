@@ -11,7 +11,7 @@ plan:
         - contract-publish:
             contract-name: event-logger
             expected-sender: SPYCC3PA4V5ZX1C627MWY40BRWX4WDPQ143X3PZQ
-            cost: 68996786
+            cost: 2250
             path: contracts/event-logger.clar
             anchor-block-only: true
             clarity-version: 3
