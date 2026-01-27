@@ -1,29 +1,4 @@
-;; title: event-logger
-;; version:
-;; summary:
-;; description:
-
-;; traits
-;;
-
-;; token definitions
-;;
-
-;; constants
-;;
-
-;; data vars
-;;
-
-;; data maps
-;;
-
-;; public functions
-;;
-
-;; read only functions
-;;
-
-;; private functions
-;;
-
+;; ---------------------------------------------------------
+;; Event Logger
+;; Simple message logger
+;; ---------------------------------------------------------
