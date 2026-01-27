@@ -11,7 +11,7 @@ plan:
         - contract-publish:
             contract-name: achievement-badges
             expected-sender: SPYCC3PA4V5ZX1C627MWY40BRWX4WDPQ143X3PZQ
-            cost: 211658832
+            cost: 3810
             path: contracts/achievement-badges.clar
             anchor-block-only: true
             clarity-version: 3
