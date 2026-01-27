@@ -11,7 +11,7 @@ plan:
         - contract-publish:
             contract-name: leaderboard
             expected-sender: SPYCC3PA4V5ZX1C627MWY40BRWX4WDPQ143X3PZQ
-            cost: 793647
+            cost: 2150
             path: contracts/leaderboard.clar
             anchor-block-only: true
             clarity-version: 3
