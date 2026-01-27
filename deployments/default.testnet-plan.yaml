@@ -11,7 +11,7 @@ plan:
         - contract-publish:
             contract-name: treasury
             expected-sender: STYCC3PA4V5ZX1C627MWY40BRWX4WDPQ16Q6F2FD
-            cost: 3953645
+            cost: 2430
             path: contracts/treasury.clar
             anchor-block-only: true
             clarity-version: 3
