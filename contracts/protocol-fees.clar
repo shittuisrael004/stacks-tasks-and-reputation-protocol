@@ -1,29 +1,4 @@
-;; title: protocol-fees
-;; version:
-;; summary:
-;; description:
-
-;; traits
-;;
-
-;; token definitions
-;;
-
-;; constants
-;;
-
-;; data vars
-;;
-
-;; data maps
-;;
-
-;; public functions
-;;
-
-;; read only functions
-;;
-
-;; private functions
-;;
-
+;; ---------------------------------------------------------
+;; Protocol Fees
+;; Fixed STX protocol fee
+;; ---------------------------------------------------------
