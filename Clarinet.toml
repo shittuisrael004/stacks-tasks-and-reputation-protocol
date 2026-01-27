@@ -5,8 +5,7 @@ authors = []
 telemetry = false
 cache_dir = './.cache'
 requirements = []
-[contracts.task-history]
-path = 'contracts/task-history.clar'
+
 clarity_version = 3
 epoch = 'latest'
 [repl.analysis]
