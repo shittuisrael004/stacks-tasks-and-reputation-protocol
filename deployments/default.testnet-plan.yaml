@@ -11,7 +11,7 @@ plan:
         - contract-publish:
             contract-name: protocol-upgrades
             expected-sender: STYCC3PA4V5ZX1C627MWY40BRWX4WDPQ16Q6F2FD
-            cost: 1833901
+            cost: 3430
             path: contracts/protocol-upgrades.clar
             anchor-block-only: true
             clarity-version: 3
