@@ -5,8 +5,7 @@ authors = []
 telemetry = false
 cache_dir = './.cache'
 requirements = []
-[contracts.achievement-badges]
-path = 'contracts/achievement-badges.clar'
+
 clarity_version = 3
 epoch = 'latest'
 [repl.analysis]
