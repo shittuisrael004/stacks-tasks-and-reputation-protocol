@@ -11,7 +11,7 @@ plan:
         - contract-publish:
             contract-name: pause-guardian
             expected-sender: SPYCC3PA4V5ZX1C627MWY40BRWX4WDPQ143X3PZQ
-            cost: 121229906
+            cost: 3260
             path: contracts/pause-guardian.clar
             anchor-block-only: true
             clarity-version: 3
