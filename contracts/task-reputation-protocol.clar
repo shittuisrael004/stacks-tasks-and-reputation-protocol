@@ -321,3 +321,6 @@
 
 (define-read-only (get-submission (task-id uint))
   (map-get? submissions task-id))
+
+(define-read-only (get-next-task-id)
+  (var-get next-task-id))
