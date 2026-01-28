@@ -41,3 +41,10 @@
 ;; ---------------------------------------------------------
 ;; Task System
 ;; ---------------------------------------------------------
+
+;; Task status codes
+(define-constant STATUS-OPEN u0)
+(define-constant STATUS-ASSIGNED u1)
+(define-constant STATUS-SUBMITTED u2)
+(define-constant STATUS-COMPLETED u3)
+(define-constant STATUS-CANCELLED u4)
