@@ -315,3 +315,6 @@
 ;; ---------------------------------------------------------
 ;; Read-only Views (Frontend Friendly)
 ;; ---------------------------------------------------------
+
+(define-read-only (get-task (task-id uint))
+  (map-get? tasks task-id))
