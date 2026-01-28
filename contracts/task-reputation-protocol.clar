@@ -179,3 +179,59 @@
 ;; ---------------------------------------------------------
 ;; Task Review & Payout
 ;; ---------------------------------------------------------
+
+(define-public (review-task (task-id uint) (approve bool))
+  (let ((task (unwrap! (map-get? tasks task-id) (err u404))))
+    (asserts! (is-eq tx-sender (get creator task)) (err u401))
+    (asserts! (is-eq (get status task) STATUS-SUBMITTED) (err u104))
+
+    (if approve
+        ;; APPROVE TASK
+        (let ((worker (unwrap! (get worker task) (err u500)))
+              (bounty (get bounty task)))
+
+          ;; Pay worker from escrow
+          (as-contract
+            (try! (stx-transfer? bounty tx-sender worker))
+          )
+
+          ;; Increase worker reputation
+          (let ((rep (default-to 0 (map-get? reputation worker))))
+            (map-set reputation worker (+ rep 10)))
+
+          (map-set tasks task-id {
+            creator: (get creator task),
+            worker: (get worker task),
+            bounty: bounty,
+            status: STATUS-COMPLETED
+          })
+
+          (print {
+            event: "task_completed",
+            task_id: task-id,
+            worker: worker,
+            bounty: bounty
+          })
+
+          (ok true)
+        )
+
+        ;; REJECT TASK
+        (begin
+          (map-set tasks task-id {
+            creator: (get creator task),
+            worker: none,
+            bounty: (get bounty task),
+            status: STATUS-OPEN
+          })
+
+          (print {
+            event: "task_rejected",
+            task_id: task-id
+          })
+
+          (ok false)
+        )
+    )
+  )
+)
