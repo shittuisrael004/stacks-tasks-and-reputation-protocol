@@ -24,3 +24,6 @@
 ;; ---------------------------------------------------------
 ;; Protocol State
 ;; ---------------------------------------------------------
+
+(define-data-var paused bool false)
+(define-data-var next-task-id uint u1)
