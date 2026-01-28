@@ -324,3 +324,6 @@
 
 (define-read-only (get-next-task-id)
   (var-get next-task-id))
+
+(define-read-only (get-contract-balance)
+  (stx-get-balance (as-contract tx-sender)))
