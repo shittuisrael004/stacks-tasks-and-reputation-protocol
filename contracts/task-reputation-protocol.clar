@@ -31,3 +31,9 @@
 ;; ---------------------------------------------------------
 ;; User & Reputation System
 ;; ---------------------------------------------------------
+
+;; Registered users
+(define-map users principal uint)
+
+;; Reputation score per user
+(define-map reputation principal int)
