@@ -271,3 +271,25 @@
 ;; ---------------------------------------------------------
 ;; Emergency Withdraw (Admin Only)
 ;; ---------------------------------------------------------
+
+(define-public (emergency-withdraw)
+  (begin
+    (assert-admin)
+
+    (let ((balance (stx-get-balance (as-contract tx-sender))))
+      (asserts! (> balance u0) (err u402))
+
+      (as-contract
+        (try! (stx-transfer? balance tx-sender ADMIN))
+      )
+
+      (print {
+        event: "emergency_withdraw",
+        admin: tx-sender,
+        amount: balance
+      })
+
+      (ok balance)
+    )
+  )
+)
