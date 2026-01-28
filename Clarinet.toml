@@ -5,7 +5,7 @@ authors = []
 telemetry = false
 cache_dir = './.cache'
 requirements = []
-[contracts.task-reputation-protocol]
+[contracts.task-reputation-protocol-v1]
 path = 'contracts/task-reputation-protocol.clar'
 clarity_version = 3
 epoch = 'latest'
