@@ -48,3 +48,11 @@
 (define-constant STATUS-SUBMITTED u2)
 (define-constant STATUS-COMPLETED u3)
 (define-constant STATUS-CANCELLED u4)
+
+;; Task storage
+(define-map tasks uint {
+  creator: principal,
+  worker: (optional principal),
+  bounty: uint,
+  status: uint
+})
