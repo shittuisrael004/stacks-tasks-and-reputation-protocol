@@ -63,3 +63,6 @@
 ;; ---------------------------------------------------------
 ;; Internal Guards
 ;; ---------------------------------------------------------
+
+(define-private (assert-not-paused)
+  (asserts! (not (var-get paused)) (err u100)))
