@@ -282,7 +282,7 @@
 
 (define-public (emergency-withdraw)
   (begin
-    (assert-admin)
+    (try! (assert-admin))
 
     (let ((balance (stx-get-balance (as-contract tx-sender))))
       (asserts! (> balance u0) (err u402))
@@ -308,7 +308,7 @@
 
 (define-public (set-paused (state bool))
   (begin
-    (assert-admin)
+    (try! (assert-admin))
     (var-set paused state)
 
     (print {
