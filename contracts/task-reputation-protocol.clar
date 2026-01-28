@@ -14,3 +14,9 @@
 ;; ---------------------------------------------------------
 ;; Constants & Admin
 ;; ---------------------------------------------------------
+
+;; Deployer is protocol admin
+(define-constant ADMIN tx-sender)
+
+;; Protocol version
+(define-constant VERSION "1.0.0")
