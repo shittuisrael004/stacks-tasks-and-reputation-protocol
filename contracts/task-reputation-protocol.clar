@@ -84,7 +84,7 @@
 
 (define-public (register)
   (begin
-    (assert-not-paused)
+    (try! (assert-not-paused))
     (map-set users tx-sender stacks-block-height)
 
     (print { event: "user_registered", user: tx-sender })
@@ -102,7 +102,7 @@
 
 (define-public (create-task (bounty uint))
   (begin
-    (assert-not-paused)
+    (try! (assert-not-paused))
     (asserts! (is-some (map-get? users tx-sender)) (err u101))
 
     ;; Lock STX into contract escrow
