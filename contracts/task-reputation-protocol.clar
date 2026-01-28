@@ -73,3 +73,15 @@
 ;; ---------------------------------------------------------
 ;; User Registration
 ;; ---------------------------------------------------------
+
+(define-public (register)
+  (begin
+    (assert-not-paused)
+    (map-set users tx-sender block-height)
+
+    (print { event: "user_registered", user: tx-sender })
+
+    (ok true)
+  )
+)
+
