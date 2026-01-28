@@ -59,3 +59,7 @@
 
 ;; Submission proof (IPFS hash, URL, etc.)
 (define-map submissions uint (string-ascii 64))
+
+;; ---------------------------------------------------------
+;; Internal Guards
+;; ---------------------------------------------------------
