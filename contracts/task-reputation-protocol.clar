@@ -85,7 +85,7 @@
 (define-public (register)
   (begin
     (assert-not-paused)
-    (map-set users tx-sender block-height)
+    (map-set users tx-sender stacks-block-height)
 
     (print { event: "user_registered", user: tx-sender })
 
