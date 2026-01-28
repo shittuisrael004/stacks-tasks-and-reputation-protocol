@@ -125,3 +125,25 @@
 ;; ---------------------------------------------------------
 ;; Task Assignment
 ;; ---------------------------------------------------------
+
+(define-public (assign-task (task-id uint) (worker principal))
+  (let ((task (unwrap! (map-get? tasks task-id) (err u404))))
+    (asserts! (is-eq tx-sender (get creator task)) (err u401))
+    (asserts! (is-eq (get status task) STATUS-OPEN) (err u102))
+
+    (map-set tasks task-id {
+      creator: (get creator task),
+      worker: (some worker),
+      bounty: (get bounty task),
+      status: STATUS-ASSIGNED
+    })
+
+    (print {
+      event: "task_assigned",
+      task_id: task-id,
+      worker: worker
+    })
+
+    (ok true)
+  )
+)
