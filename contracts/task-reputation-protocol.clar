@@ -151,3 +151,27 @@
 ;; ---------------------------------------------------------
 ;; Task Submission
 ;; ---------------------------------------------------------
+
+(define-public (submit-task (task-id uint) (proof (string-ascii 64)))
+  (let ((task (unwrap! (map-get? tasks task-id) (err u404))))
+    (asserts! (is-eq (some tx-sender) (get worker task)) (err u401))
+    (asserts! (is-eq (get status task) STATUS-ASSIGNED) (err u103))
+
+    (map-set submissions task-id proof)
+
+    (map-set tasks task-id {
+      creator: (get creator task),
+      worker: (get worker task),
+      bounty: (get bounty task),
+      status: STATUS-SUBMITTED
+    })
+
+    (print {
+      event: "task_submitted",
+      task_id: task-id,
+      worker: tx-sender
+    })
+
+    (ok true)
+  )
+)
