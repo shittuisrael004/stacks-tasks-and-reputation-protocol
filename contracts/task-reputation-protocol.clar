@@ -239,3 +239,31 @@
 ;; ---------------------------------------------------------
 ;; Task Cancellation
 ;; ---------------------------------------------------------
+
+(define-public (cancel-task (task-id uint))
+  (let ((task (unwrap! (map-get? tasks task-id) (err u404))))
+    (asserts! (is-eq tx-sender (get creator task)) (err u401))
+    (asserts! (not (is-eq (get status task) STATUS-COMPLETED)) (err u105))
+    (asserts! (not (is-eq (get status task) STATUS-CANCELLED)) (err u106))
+
+    ;; Refund escrow to creator
+    (as-contract
+      (try! (stx-transfer? (get bounty task) tx-sender (get creator task)))
+    )
+
+    (map-set tasks task-id {
+      creator: (get creator task),
+      worker: none,
+      bounty: (get bounty task),
+      status: STATUS-CANCELLED
+    })
+
+    (print {
+      event: "task_cancelled",
+      task_id: task-id,
+      creator: tx-sender
+    })
+
+    (ok true)
+  )
+)
