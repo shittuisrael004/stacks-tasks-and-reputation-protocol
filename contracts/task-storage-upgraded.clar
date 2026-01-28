@@ -1,29 +1,5 @@
-;; title: task-storage-upgraded
-;; version:
-;; summary:
-;; description:
-
-;; traits
-;;
-
-;; token definitions
-;;
-
-;; constants
-;;
-
-;; data vars
-;;
-
-;; data maps
-;;
-
-;; public functions
-;;
-
-;; read only functions
-;;
-
-;; private functions
-;;
-
+;; ---------------------------------------------------------
+;; Task Storage (SECURED)
+;; - Only registered users can create tasks
+;; - Protocol must not be paused
+;; ---------------------------------------------------------
