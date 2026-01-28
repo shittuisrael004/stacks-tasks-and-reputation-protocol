@@ -85,3 +85,6 @@
   )
 )
 
+(define-read-only (get-reputation (user principal))
+  (default-to 0 (map-get? reputation user)))
+
