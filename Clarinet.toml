@@ -7,7 +7,7 @@ cache_dir = './.cache'
 requirements = []
 [contracts.task-reputation-protocol]
 path = 'contracts/task-reputation-protocol.clar'
-clarity_version = 4
+clarity_version = 3
 epoch = 'latest'
 [repl.analysis]
 passes = [
