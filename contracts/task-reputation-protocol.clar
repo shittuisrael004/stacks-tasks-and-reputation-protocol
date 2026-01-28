@@ -94,7 +94,8 @@
 )
 
 (define-read-only (get-reputation (user principal))
-  (default-to 0 (map-get? reputation user)))
+    (default-to 0 (map-get? reputation user))
+)
 
 ;; ---------------------------------------------------------
 ;; Task Creation (STX Escrow)
@@ -325,13 +326,17 @@
 ;; ---------------------------------------------------------
 
 (define-read-only (get-task (task-id uint))
-  (map-get? tasks task-id))
+  (map-get? tasks task-id)
+)
 
 (define-read-only (get-submission (task-id uint))
-  (map-get? submissions task-id))
+  (map-get? submissions task-id)
+)
 
 (define-read-only (get-next-task-id)
-  (var-get next-task-id))
+  (var-get next-task-id)
+)
 
 (define-read-only (get-contract-balance)
-  (stx-get-balance (as-contract tx-sender)))
+  (stx-get-balance (as-contract tx-sender))
+)
