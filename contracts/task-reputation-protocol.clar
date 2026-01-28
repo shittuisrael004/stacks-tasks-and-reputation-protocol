@@ -92,3 +92,32 @@
 ;; Task Creation (STX Escrow)
 ;; ---------------------------------------------------------
 
+(define-public (create-task (bounty uint))
+  (begin
+    (assert-not-paused)
+    (asserts! (is-some (map-get? users tx-sender)) (err u101))
+
+    ;; Lock STX into contract escrow
+    (try! (stx-transfer? bounty tx-sender (as-contract tx-sender)))
+
+    (let ((task-id (var-get next-task-id)))
+      (map-set tasks task-id {
+        creator: tx-sender,
+        worker: none,
+        bounty: bounty,
+        status: STATUS-OPEN
+      })
+
+      (var-set next-task-id (+ task-id u1))
+
+      (print {
+        event: "task_created",
+        task_id: task-id,
+        creator: tx-sender,
+        bounty: bounty
+      })
+
+      (ok task-id)
+    )
+  )
+)
