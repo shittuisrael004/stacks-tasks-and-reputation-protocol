@@ -1,13 +1,14 @@
 ;; =========================================================
-;; Task & Reputation Protocol (Single Contract)
+;; Task & Reputation Protocol
+;; Version: 1.0.0
 ;; =========================================================
-;; A simple on-chain task marketplace with:
-;; - Task creation with STX escrow
-;; - Assignment, submission, review
-;; - Task cancellation with refund
-;; - Reputation tracking
-;; - Event emissions for indexing
-;; - Admin controls
+;; A single-contract protocol for:
+;; - Creating tasks with STX escrow
+;; - Assigning and completing tasks
+;; - Paying workers in STX
+;; - Tracking reputation
+;; - Supporting task cancellation
+;; - Emergency fund recovery
 ;; =========================================================
 
 ;; ---------------------------------------------------------
