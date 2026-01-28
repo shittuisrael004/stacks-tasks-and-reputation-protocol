@@ -297,3 +297,17 @@
 ;; ---------------------------------------------------------
 ;; Admin Controls
 ;; ---------------------------------------------------------
+
+(define-public (set-paused (state bool))
+  (begin
+    (assert-admin)
+    (var-set paused state)
+
+    (print {
+      event: "protocol_paused",
+      paused: state
+    })
+
+    (ok state)
+  )
+)
