@@ -66,3 +66,6 @@
 
 (define-private (assert-not-paused)
   (asserts! (not (var-get paused)) (err u100)))
+
+(define-private (assert-admin)
+(asserts! (is-eq tx-sender ADMIN) (err u401)))
