@@ -69,3 +69,7 @@
 
 (define-private (assert-admin)
 (asserts! (is-eq tx-sender ADMIN) (err u401)))
+
+;; ---------------------------------------------------------
+;; User Registration
+;; ---------------------------------------------------------
