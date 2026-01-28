@@ -37,3 +37,7 @@
 
 ;; Reputation score per user
 (define-map reputation principal int)
+
+;; ---------------------------------------------------------
+;; Task System
+;; ---------------------------------------------------------
