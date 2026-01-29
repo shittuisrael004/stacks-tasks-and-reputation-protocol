@@ -83,3 +83,14 @@ This protocol includes an **admin-controlled emergency withdrawal function**.
 * Handle unexpected locked STX scenarios
 * Protect users during early-stage development
 
+### Important constraints
+
+* Only callable by the deployer (admin)
+* Withdraws the **entire contract balance** (no selective draining)
+* Emits a public on-chain event
+* Clearly documented and visible
+
+This is an intentional v1 design choice. In future versions, this mechanism can be replaced with time-locks, multisig, or DAO-based governance.
+
+---
+
