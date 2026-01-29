@@ -58,3 +58,18 @@ This design was chosen intentionally to:
 
 ---
 
+## 🔁 Task Lifecycle
+
+1. **User Registration**
+2. **Task Creation** (STX escrowed into contract)
+3. **Worker Assignment**
+4. **Task Submission** (proof stored on-chain)
+5. **Review & Resolution**
+   * Approval → STX paid to worker + reputation increase
+   * Rejection → task re-opened
+6. **Optional Cancellation** (refunds creator if unresolved)
+
+Each state transition is validated on-chain and emits an event.
+
+---
+
