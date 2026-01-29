@@ -24,3 +24,15 @@ The goal is clarity, correctness, and composability, not unnecessary abstraction
 
 ---
 
+## 🧠 What This Protocol Demonstrates
+
+* STX escrow using `stx-transfer?` and `as-contract`
+* Task lifecycle management (create → assign → submit → review)
+* Refund-safe task cancellation
+* On-chain reputation tracking
+* Admin-controlled emergency recovery (clearly scoped and documented)
+* Event emission (`print`) for indexers and frontends
+* Defensive programming with guards and explicit response handling
+
+---
+
