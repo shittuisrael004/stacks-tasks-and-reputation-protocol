@@ -47,3 +47,14 @@ This design was chosen intentionally to:
 * Make state transitions easier to reason about
 * Improve auditability and readability
 
+### Core Components
+
+* **User Registry** – tracks registered participants
+* **Task System** – manages task creation, assignment, submission, and completion
+* **Escrow Logic** – locks STX until task resolution
+* **Reputation System** – rewards successful task completion
+* **Admin Controls** – pause control and emergency fund recovery
+* **Event Layer** – emits structured events for off-chain indexing
+
+---
+
