@@ -122,3 +122,13 @@ A React + Stacks.js frontend can be built directly on top of this contract.
 
 ---
 
+## 📂 Repository Structure
+
+```
+contracts/
+  └─ task-reputation-protocol.clar
+README.md
+```
+
+---
+
