@@ -8,3 +8,19 @@ The protocol has been **tested on Stacks Testnet and deployed on Stacks Mainnet*
 
 ---
 
+## 🎯 Why This Project Exists
+
+This project was built to demonstrate **practical, non-trivial Clarity development**, not just isolated examples.
+
+It focuses on the kinds of problems real protocols face:
+
+* Safely handling **STX transfers and escrow**
+* Managing complex **state transitions** on-chain
+* Enforcing **access control and ownership**
+* Designing for **frontend integration and indexing**
+* Making explicit **trust and centralization tradeoffs**
+
+The goal is clarity, correctness, and composability, not unnecessary abstraction.
+
+---
+
