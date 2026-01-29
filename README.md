@@ -73,3 +73,7 @@ Each state transition is validated on-chain and emits an event.
 
 ---
 
+## 🛡️ Emergency Withdrawal & Trust Model
+
+This protocol includes an **admin-controlled emergency withdrawal function**.
+
