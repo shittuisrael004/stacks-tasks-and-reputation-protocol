@@ -148,3 +148,4 @@ README.md
 * Prioritizes correctness over cleverness
 * Designed to be read, understood, and extended
 
+**Built with ❤️ on Stacks**
