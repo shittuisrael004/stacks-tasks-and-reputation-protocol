@@ -77,3 +77,9 @@ Each state transition is validated on-chain and emits an event.
 
 This protocol includes an **admin-controlled emergency withdrawal function**.
 
+### Why it exists
+
+* Recover funds in case of critical bugs
+* Handle unexpected locked STX scenarios
+* Protect users during early-stage development
+
