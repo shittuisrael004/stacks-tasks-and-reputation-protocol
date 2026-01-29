@@ -94,3 +94,18 @@ This is an intentional v1 design choice. In future versions, this mechanism can 
 
 ---
 
+## 🧪 Testing & Deployment
+
+* Deployed on **Stacks Testnet & Stacks Mainnet**
+* Manually tested flows:
+
+  * User registration
+  * Task creation & escrow
+  * Assignment & submission
+  * Approval & STX payout
+  * Task cancellation & refunds
+  * Emergency withdrawal
+
+
+---
+
