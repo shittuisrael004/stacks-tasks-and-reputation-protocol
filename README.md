@@ -36,3 +36,14 @@ The goal is clarity, correctness, and composability, not unnecessary abstraction
 
 ---
 
+## 🧱 Architecture Overview
+
+The protocol is implemented as a **single, cohesive smart contract**.
+
+This design was chosen intentionally to:
+
+* Simplify frontend integration
+* Reduce cross-contract complexity
+* Make state transitions easier to reason about
+* Improve auditability and readability
+
