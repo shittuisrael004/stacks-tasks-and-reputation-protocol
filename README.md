@@ -132,3 +132,14 @@ README.md
 
 ---
 
+## 🧭 Future Improvements
+
+* Time-locked or multisig admin controls
+* DAO-based governance
+* Richer reputation scoring
+* Pagination helpers for frontend queries
+* Dedicated indexing layer
+
+---
+
+
