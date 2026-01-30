@@ -1,0 +1,20 @@
+[network]
+stacks_network = "mainnet"
+bitcoin_network = "mainnet"
+
+[storage]
+working_dir = "./data"
+
+[[chainhooks]]
+name = "task-events"
+type = "stacks"
+
+  [chainhooks.trigger]
+  type = "contract_call"
+
+  [chainhooks.trigger.contract_call]
+  contract_id = "SPYCC3PA4V5ZX1C627MWY40BRWX4WDPQ143X3PZQ.task-reputation-protocol"
+
+  [chainhooks.action]
+  type = "webhook"
+  url = "http://localhost:3999/webhook"
