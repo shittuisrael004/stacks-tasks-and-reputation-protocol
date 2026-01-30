@@ -1,19 +1,33 @@
-import { useEffect } from 'react';
-import { appKit } from './lib/wallet';
+import { AppConfig, UserSession } from '@stacks/connect';
+import { showConnect } from '@stacks/connect';
+import { appConfig } from './lib/stacks';
+
+const userSession = new UserSession({
+  appConfig: new AppConfig(['store_write', 'publish_data']),
+});
 
 export default function App() {
-  useEffect(() => {
-    appKit.open();
-  }, []);
+  const connectWallet = () => {
+    showConnect({
+      userSession,
+      appDetails: appConfig,
+      onFinish: () => {
+        window.location.reload();
+      },
+    });
+  };
 
   return (
     <div style={{ padding: 32 }}>
-      <h1>Stacks Tasks & Reputation</h1>
-      <p>Wallet connected via Reown AppKit</p>
+      <h1>Tasks & Reputation Protocol</h1>
 
-      <button onClick={() => appKit.open()}>
-        Connect Wallet
-      </button>
+      {!userSession.isUserSignedIn() ? (
+        <button onClick={connectWallet}>
+          Connect Stacks Wallet
+        </button>
+      ) : (
+        <p>✅ Wallet connected</p>
+      )}
     </div>
   );
 }
