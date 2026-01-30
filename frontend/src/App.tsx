@@ -1,16 +1,16 @@
-import { AppConfig, UserSession } from '@stacks/connect';
-import { showConnect } from '@stacks/connect';
-import { appConfig } from './lib/stacks';
+import { AppConfig, UserSession, showConnect } from '@stacks/connect';
 
-const userSession = new UserSession({
-  appConfig: new AppConfig(['store_write', 'publish_data']),
-});
+const appConfig = new AppConfig(['store_write', 'publish_data']);
+const userSession = new UserSession({ appConfig });
 
 export default function App() {
   const connectWallet = () => {
     showConnect({
       userSession,
-      appDetails: appConfig,
+      appDetails: {
+        name: 'Stacks Tasks & Reputation',
+        icon: window.location.origin + '/logo.png',
+      },
       onFinish: () => {
         window.location.reload();
       },
