@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  chainhook:
+    image: hirosystems/chainhook:latest
+    ports:
+      - "20456:20456"
+    volumes:
+      - ./chainhook.yaml:/chainhook.yaml
+    command: >
+      chainhook run
+      --config-path /chainhook.yaml
